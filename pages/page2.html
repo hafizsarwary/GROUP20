@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Group 20 - Land Use Layers</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/custom-styles.css" />
+
+    <style>
+        /* Gallery Layout */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        /* Lightbox (Fullscreen Image View) */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="left-sidebar is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1 id="logo"><a href="../index.html">INFORMATION</a></h1>
+            <nav id="nav"> 
+                <ul>
+                    <li class="current"><a href="../index.html">HOME</a></li>
+                    <li class="current"><a href="page2.html">INFO</a></li>
+                    <li class="current"><a href="webgis.html">WebMap</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <article id="main">
+
+            <header class="special container">
+                <h2>Here you <strong>can access different layers with their legends!</strong></h2>
+                <p>Click on any map to view it in full size.</p>
+            </header>
+
+            <!-- Gallery Section -->
+			<div class="gallery">
+				<img src="../images/ASPECT.png" alt="ASPECT" onclick="openLightbox(this.src)">
+				<img src="../images/CONFIDENCE.png" alt="VCONFIDENCE" onclick="openLightbox(this.src)">
+				<img src="../images/DTM.png" alt="DTM" onclick="openLightbox(this.src)">
+				<img src="../images/FAULTS.png" alt="FAULTS" onclick="openLightbox(this.src)">
+				<img src="../images/LandslideSusceptibilityMap_reclass.png" alt="LandslideSusceptibilityMap_reclass" onclick="openLightbox(this.src)">
+				<img src="../images/SusceptibilityMap.png" alt="SusceptibilityMap" onclick="openLightbox(this.src)">
+				<img src="../images/NDVI.png" alt="NDVI" onclick="openLightbox(this.src)">
+				<img src="../images/PROFILE.png" alt="pROFILE" onclick="openLightbox(this.src)">
+				<img src="../images/no land slide.png" alt="Urban Expansion Map" onclick="openLightbox(this.src)">
+				<img src="../images/PEOPLE.png" alt="people" onclick="openLightbox(this.src)">
+				<img src="../images/RIVERS BUFFER.png" alt="Rivers BUffer" onclick="openLightbox(this.src)">
+				<img src="../images/ROADS BUFFER.png" alt="Roads BUFFER Map" onclick="openLightbox(this.src)">
+				<img src="../images//SLOPE.png" alt="slope Map" onclick="openLightbox(this.src)">
+            </div>
+
+			
+            <!-- Lightbox (Fullscreen Image View) -->
+            <div class="lightbox" id="lightbox">
+                <span class="close-btn" onclick="closeLightbox()">&times;</span>
+                <img id="lightbox-img" src="" alt="Large View">
+            </div>
+
+            <!-- Additional Information -->
+            <div class="wrapper style1 container special">
+                <div class="row">
+                    <div class="col-4 col-12-narrower">
+                        <div>
+                            <header>
+                                <h3>Types of Land Slides</h3>
+                            </header>
+                            <p>Falls, slides, flows, topples, and spreads.</p>
+                            <footer>
+                                <ul class="buttons">
+                                    <li><a href="#" class="button small">Learn More</a></li>
+                                </ul>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="col-4 col-12-narrower">
+                        <div>
+                            <header>
+                                <h3>Why Do Landslides Happen?</h3>
+                            </header>
+                            <p>Landslides occur due to gravity acting on unstable slopes, often triggered by rain, earthquakes, or human activities.</p>
+                            <footer>
+                                <ul class="buttons">
+                                    <li><a href="#" class="button small">Learn More</a></li>
+                                </ul>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="col-4 col-12-narrower">
+                        <div>
+                            <header>
+                                <h3>Biggest Landslide Ever</h3>
+                            </header>
+                            <p>The Mount St. Helens landslide on May 18, 1980, was the largest recorded (~2.8 km³ of debris), triggering a volcanic eruption.</p>
+                            <footer>
+                                <ul class="buttons">
+                                    <li><a href="#" class="button small">Learn More</a></li>
+                                </ul>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="copyright">
+                <li>&copy; LAB Project by Hafizullah Sarwary</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/browser.min.js"></script>
+    <script src="/js/breakpoints.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Lightbox JavaScript -->
+    <script>
+        function openLightbox(src) {
+            document.getElementById("lightbox-img").src = src;
+            document.getElementById("lightbox").style.display = "flex";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

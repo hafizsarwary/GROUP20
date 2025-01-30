@@ -1,0 +1,183 @@
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.floating-button {
+    position: absolute;
+    z-index: 999;
+    left: 50px;
+    top: 10px;
+}
+
+.wrapper.style2 {
+    /* This is an example of how to change colors in the template */
+    background-color: #030302;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+.banner-transparency {
+    opacity: 0.2;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.custom-banner {
+    background-size: cover !important;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+}
+
+/* Ensure the slider images fit well */
+.custom-banner .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*Popup Styles*/
+.ol-popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    bottom: 12px;
+    left: -50px;
+    min-width: 280px;
+}
+
+.ol-popup:after,
+.ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.ol-popup:after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+}
+
+.ol-popup:before {
+    border-top-color: #cccccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+}
+
+.ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+}
+
+.ol-popup-closer:after {
+}
+
+/*Add your new styles after this line*/
+.custom-control {
+    bottom: 60px;
+    position: absolute;
+    right: 15px;
+    background: white;
+    border: 2px solid  green;
+    padding: 10px;
+}
+
+/* Swiper container styling */
+.mySwiper {
+    width: 100%;
+    max-width: 900px; /* Adjust slider width */
+    margin: auto;
+    position: relative;
+}
+
+/* Image styling */
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Buttons */
+.swiper-button-next, .swiper-button-prev {
+    color: #333; /* Change arrow color */
+}
+
+/* Pagination Dots */
+.swiper-pagination-bullet {
+    background: #333;
+}
+body {
+    background-image: url('images/sa.jpg'); /* Change the path to your image */
+    background-size: cover; /* Ensures the image covers the whole page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+}
+.special.container {
+    background: white;
+    opacity: 0.9; /* 30% transparency */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.project-header {
+    font-size: 28px; /* Adjust text size */
+    color: #ffffff; /* White text */
+    font-family: "Arial", sans-serif; /* Change font */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center align */
+    margin-top: 20px; /* Add space */
+    background: rgba(255, 255, 255, 0.3); /* 30% transparent white */
+    padding: 10px 350px; /* Add some spacing */
+    border-radius: 8px; /* Rounded corners */
+    display: inline-block; /* Adjust width */
+}
+
+.group-header {
+    font-size: 60px; /* Adjust text size */
+    color: #ffffff; /* White text */
+    font-family: "Palatino", sans-serif; /* Change font */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center align */
+    margin-top: 20px; /* Add space */
+    background: rgba(255, 255, 255, 0.3); /* 30% transparent white */
+    padding: 40px 20px; /* Add some spacing */
+    border-radius: 8px; /* Rounded corners */
+   
+}
+
+.close-btn {
+    position: absolute;
+    top: auto;  /* Reset top positioning */
+    bottom: 30px;  /* Move it 1 inch down */
+    right: 30px;
+    font-size: 20px;
+    color: rgb(255, 0, 0);
+    background: rgb(138, 85, 85);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
